@@ -48,7 +48,8 @@ $(document).ready(function() {
 				//movie.css('visibility', 'hidden');
 				//progressBar.hide('slow');
 				movieTitle.html(data.Title);
-				moviePoster.attr('src', data.Poster)
+				if (data.Poster=="N/A") data.Poster="../assets/img/movie.jpg";
+				moviePoster.attr('src', data.Poster);
 				plot.html(data.Plot);
 				genre.html(data.Genre);
 				director.html(data.Director);
