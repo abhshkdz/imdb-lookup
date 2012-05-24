@@ -42,7 +42,7 @@
 
 .hidden {
   display: none;
-  visibility: hidden;
+  //visibility: hidden; 
 }
 
 .visible-phone {
