@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 	searchButton.on('click', function() {
 		console.log (searchText.val());
-		movie.addClass('hidden');
+		movie.addClass('hidden').css('opacity', '0');
 		progressBar.removeClass('hidden');
 		search();
 	});
@@ -26,7 +26,7 @@ $(document).ready(function() {
 	function search() {
 
 		var query = searchText.val();
-		if (query.length<3 && query.length>0) {
+		if (query.length<3) {
 			searchText.val('').attr("placeholder", "please enter longer query");
 			progressBar.addClass('hidden');
 			return;
