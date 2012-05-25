@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 	searchButton.on('click', function() {
 		console.log (searchText.val());
-		movie.addClass('hidden').css('opacity', '0');
+		movie.addClass('hidden');
 		progressBar.removeClass('hidden');
 		search();
 	});
@@ -34,7 +34,6 @@ $(document).ready(function() {
 
 		query = query.split(' ');
 		query = query.join('+');
-		//$.getJSON ("http://www.imdbapi.com/?t="+query, function(data) {
 		$.getJSON ("./test/search.php?search="+query, function(data) {	
 			console.log (data);
 			if (data.Response=="False") {
@@ -42,11 +41,6 @@ $(document).ready(function() {
 				progressBar.addClass('hidden');
 			}
 			else {
-				//movie.show('slow');
-				//movie.removeClass('hidden');
-				
-				//movie.css('visibility', 'hidden');
-				//progressBar.hide('slow');
 				movieTitle.html(data.Title);
 				if (data.Poster=="N/A") data.Poster="../assets/img/movie.jpg";
 				moviePoster.attr('src', data.Poster);
@@ -64,8 +58,6 @@ $(document).ready(function() {
 					movie.animate({
 						'opacity': '1'
 					}, 'slow');
-					//movie.show('slow');
-					//progressBar.hide('slow');
 				});
 			}
 		});
