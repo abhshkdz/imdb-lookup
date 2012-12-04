@@ -1,2 +1,4 @@
-#Movie Suggest
-A simple movie search engine to get data from IMDB api, formatted and displayed nicely. @durgeshsuthar1992 asked for this.
+#Movie Lookup
+A movie search to get data from IMDB api, formatted and displayed nicely.
+
+[Durgesh](https://github.com/durgeshsuthar1992) asked me to make it once..
